@@ -7,6 +7,8 @@ import Redux from "../pages/ReduxTest";
 import BlackBoxCounter from "../test/unit/blackbox/BlackCounter";
 import WhiteBoxCounter from "../test/unit/whitebox/WhiteCounter";
 import TodoApp from "../test/integration/TodoApp";
+import Layouts from "../pages/PromiseTest/Layouts";
+import Signup from "../pages/PromiseTest/Signup";
 
 const routes = [
   { path: "/", element: <Home /> },
@@ -18,6 +20,11 @@ const routes = [
   { path: "test/unit/blackbox/counter", element: <BlackBoxCounter /> },
   { path: "test/unit/whitebox/counter", element: <WhiteBoxCounter /> },
   { path: "test/integration/todoapp", element: <TodoApp /> },
+  { path: "promise/signup", element: (
+  <Layouts>
+    <Signup />
+  </Layouts>
+) },
 ];
 
 export default routes;
